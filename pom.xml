@@ -53,7 +53,15 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                      <!-- declaring where the war file need to be created -->
+                    <webappDirectory>target/deploy</webappDirectory>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
 </project>

@@ -1,0 +1,27 @@
+version: 0.2
+phases:
+       pre-build:
+                commands:
+                       #to print something in the logs
+                       - echo " ==== entering the pre-build phase ===="
+
+       build:
+             commands:
+                      - echo " === entering the build phase ===="
+                      #the command for mvn to create a war file
+                      - mvn clean prepare-package war:explode
+
+
+       post-build:
+                  commands:
+                     - echo " === entering the post-build phase === "
+                    # this will move the folder  deploy from the target folder to the root folder
+                     - mv target/deploy .
+
+
+
+
+artifacts:
+         files:
+            # the name of the folder of the deployment
+            - deploy/**/*
