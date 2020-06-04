@@ -9,7 +9,7 @@ phases:
              commands:
                       - echo " === entering the build phase ===="
                       #the command for mvn to create a war file
-                      - mvn clean prepare-package war:explode
+                      - mvn clean prepare-package war:exploded
 
 
        post-build:
