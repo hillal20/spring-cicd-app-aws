@@ -1,6 +1,6 @@
 version: 0.2
 phases:
-       pre-build:
+       pre_build:
                 commands:
                        #to print something in the logs
                        - echo " ==== entering the pre-build phase ===="
@@ -12,7 +12,7 @@ phases:
                       - mvn clean prepare-package war:exploded
 
 
-       post-build:
+       post_build:
                   commands:
                      - echo " === entering the post-build phase === "
                     # this will move the folder  deploy from the target folder to the root folder
