@@ -16,7 +16,7 @@ phases:
                   commands:
                      - echo " === entering the post-build phase === "
                     # this will move the folder  deploy from the target folder to the root folder
-                     - mv target/deploy .
+                     - mv target/deploy ./
 
 
 
