@@ -53,7 +53,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin><!-- don't pack the war  -->
+
+            <!-- create and  pack the war file   -->
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <executions>
@@ -74,6 +76,9 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- end  create and  pack the war file   -->
+
+
         </plugins>
     </build>
 </project>
