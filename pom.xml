@@ -76,7 +76,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- end  create and  pack the war file   -->
+            <!-- end of  create and  pack the war file   -->
 
 
         </plugins>
