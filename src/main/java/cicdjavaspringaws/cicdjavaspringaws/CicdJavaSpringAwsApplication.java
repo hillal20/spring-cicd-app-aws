@@ -6,7 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class CicdJavaSpringAwsApplication extends SpringBootServletInitializer {
+public class CicdJavaSpringAwsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CicdJavaSpringAwsApplication.class, args);
@@ -14,9 +14,6 @@ public class CicdJavaSpringAwsApplication extends SpringBootServletInitializer {
 		System.out.println(" ====== CICD SPRING AWS IS RUNNING ===== ");
 	}
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(CicdJavaSpringAwsApplication.class);
-	}
+
 
 }
