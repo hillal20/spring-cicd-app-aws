@@ -11,7 +11,7 @@ public class CicdJavaSpringAwsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CicdJavaSpringAwsApplication.class, args);
 
-		System.out.println(" ====== CICD SPRING AWS IS RUNNING ===== ");
+		System.out.println(" ====== CICD SPRING AWS IS RUNNING === ");
 	}
 
 
