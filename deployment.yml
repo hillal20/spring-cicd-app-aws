@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: app-image-deployment-v1 # the name of the deployment
+spec:
+  replicas: 3
+  strategy:
+    #    type: Recreate
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: app-image # the name of the app
+        version: v1 # the version of the app
+    spec:
+      containers:
+        - name: app-image-container-v1 # the name of the container
+          image: app-image:v1
+          ports:
+            - containerPort: 8085
+        #   args:
+        #      - /bin/sh
+        #      - -c
+        #      - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
+
+        #   livenessProbe:
+        #            exec:
+        #              command:
+        #                - cat
+        #                - /tmp/healthy
+        #            initialDelaySeconds: 5
+        #            periodSeconds: 5

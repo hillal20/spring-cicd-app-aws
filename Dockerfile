@@ -1,0 +1,7 @@
+FROM openjdk:12
+
+ADD  ./target/MY_APPLICATION.jar  ./MY_APPLICATION.jar
+
+EXPOSE 8085
+
+ENTRYPOINT ["java", "-jar", "MY_APPLICATION.jar"]
